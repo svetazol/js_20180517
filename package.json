@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/burlakilia/js_20180517#readme",
   "dependencies": {
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
     "static-server": "^2.2.1",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"

@@ -20,4 +20,3 @@ export default class Button extends Block {
         this.el.type = type;
     }
 }
-
