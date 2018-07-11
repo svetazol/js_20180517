@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Button; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button.scss */ \"./blocks/button/button.scss\");\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass Button extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name() {\n        return 'button';\n    }\n\n    /**\n     * Кнопка\n     * @param {Object} obj\n     * @param {string} obj.text - текст кнопки\n     * @param {string} [obj.type]\n     */\n    constructor({ text, type = 'button' }) {\n        super();\n\n        this.el.textContent = text;\n        this.el.classList.toggle('button');\n        this.el.type = type;\n    }\n}\n\n\n//# sourceURL=webpack:///./blocks/button/button.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Button; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./button.scss */ \"./blocks/button/button.scss\");\n/* harmony import */ var _button_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_button_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass Button extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name() {\n        return 'button';\n    }\n\n    /**\n     * Кнопка\n     * @param {Object} obj\n     * @param {string} obj.text - текст кнопки\n     * @param {string} [obj.type]\n     */\n    constructor({ text, type }) {\n        super();\n\n        this.el.textContent = text;\n        this.el.classList.toggle('button');\n        if (type) {\n            this.el.type = type;\n        }\n\n    }\n}\n\n\n//# sourceURL=webpack:///./blocks/button/button.js?");
 
 /***/ }),
 
@@ -129,7 +129,18 @@ eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Input; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\n\nclass Input extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'input';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} obj.placeholder - текст кнопки,\n     * @param {string} [obj.type] - тип инпута (по умолчанию text)\n     */\n    constructor({ placeholder, type = 'text', value='' }) {\n        super();\n\n        this.el.classList.toggle('input', true);\n        this.el.type  = type;\n        this.el.placeholder = placeholder;\n        this.el.value = value;\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/input/input.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Input; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n/* harmony import */ var _input_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./input.scss */ \"./blocks/input/input.scss\");\n/* harmony import */ var _input_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_input_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass Input extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'input';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} obj.placeholder - текст кнопки,\n     * @param {string} [obj.type] - тип инпута (по умолчанию text)\n     */\n    constructor({ placeholder, type = 'text', value='' }) {\n        super();\n\n        this.el.classList.toggle('input', true);\n        this.el.type  = type;\n        this.el.placeholder = placeholder;\n        this.el.value = value;\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/input/input.js?");
+
+/***/ }),
+
+/***/ "./blocks/input/input.scss":
+/*!*********************************!*\
+  !*** ./blocks/input/input.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js!./input.scss */ \"./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/input/input.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./blocks/input/input.scss?");
 
 /***/ }),
 
@@ -141,7 +152,29 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return List; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\n\nclass List extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'ul';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} obj.list - массив с элементами списка\n     */\n    constructor({ list }) {\n        super();\n\n        this.el.classList.toggle('list', true);\n        this.el.innerHTML = list.map(item => {\n            return `<li class='list__item'>${item}</li>`\n        }).join('');\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/list/list.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return List; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n/* harmony import */ var _list_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./list.scss */ \"./blocks/list/list.scss\");\n/* harmony import */ var _list_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_list_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass List extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'ul';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} obj.list - массив с элементами списка\n     */\n    constructor({ list }) {\n        super();\n\n        this.el.classList.toggle('list', true);\n        this.el.innerHTML = list.map(item => {\n            return `<li class='list__item'>${item}</li>`\n        }).join('');\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/list/list.js?");
+
+/***/ }),
+
+/***/ "./blocks/list/list.scss":
+/*!*******************************!*\
+  !*** ./blocks/list/list.scss ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js!./list.scss */ \"./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/list/list.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./blocks/list/list.scss?");
+
+/***/ }),
+
+/***/ "./blocks/messages/message.scss":
+/*!**************************************!*\
+  !*** ./blocks/messages/message.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js!./message.scss */ \"./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/messages/message.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./blocks/messages/message.scss?");
 
 /***/ }),
 
@@ -153,7 +186,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Message; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\n\nclass Message extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'p';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} obj.message - текст сообщения\n     */\n    constructor({ message }) {\n        super();\n\n        this.el.classList.toggle('message', true);\n        this.el.innerText = message;\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/messages/messages.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Message; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n/* harmony import */ var _message_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./message.scss */ \"./blocks/messages/message.scss\");\n/* harmony import */ var _message_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_message_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass Message extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'p';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} obj.message - текст сообщения\n     */\n    constructor({ message }) {\n        super();\n\n        this.el.classList.toggle('message', true);\n        this.el.innerText = message;\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/messages/messages.js?");
+
+/***/ }),
+
+/***/ "./blocks/reset.scss":
+/*!***************************!*\
+  !*** ./blocks/reset.scss ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../node_modules/css-loader!../node_modules/sass-loader/lib/loader.js!./reset.scss */ \"./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/reset.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./blocks/reset.scss?");
 
 /***/ }),
 
@@ -165,7 +209,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Textarea; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\n\nclass Textarea extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'textarea';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} bj.placeholder - текст поля\n     */\n    constructor({ placeholder }) {\n        super();\n\n        this.el.classList.toggle('textarea', true);\n        this.el.placeholder = placeholder;\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/textarea/textarea.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Textarea; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n/* harmony import */ var _textarea_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./textarea.scss */ \"./blocks/textarea/textarea.scss\");\n/* harmony import */ var _textarea_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_textarea_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nclass Textarea extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'textarea';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} bj.placeholder - текст поля\n     */\n    constructor({ placeholder }) {\n        super();\n\n        this.el.classList.toggle('textarea', true);\n        this.el.placeholder = placeholder;\n    }\n\n}\n\n\n//# sourceURL=webpack:///./blocks/textarea/textarea.js?");
+
+/***/ }),
+
+/***/ "./blocks/textarea/textarea.scss":
+/*!***************************************!*\
+  !*** ./blocks/textarea/textarea.scss ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader!../../node_modules/sass-loader/lib/loader.js!./textarea.scss */ \"./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/textarea/textarea.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./blocks/textarea/textarea.scss?");
 
 /***/ }),
 
@@ -177,7 +232,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/button/button */ \"./blocks/button/button.js\");\n/* harmony import */ var _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/input/input */ \"./blocks/input/input.js\");\n/* harmony import */ var _blocks_list_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/list/list */ \"./blocks/list/list.js\");\n/* harmony import */ var _blocks_textarea_textarea__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/textarea/textarea */ \"./blocks/textarea/textarea.js\");\n/* harmony import */ var _blocks_messages_messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/messages/messages */ \"./blocks/messages/messages.js\");\n\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n\n    let button = new _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n        text: 'Тестовая кнопка'\n    });\n\n    let input = new _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n        placeholder: 'Тестовый инпут'\n    });\n\n    let list = new _blocks_list_list__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n        list: ['первый', 'второй', 'третий']\n    });\n\n    let textarea = new _blocks_textarea_textarea__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({\n        placeholder: 'Введите текст'\n    });\n\n    let message = new _blocks_messages_messages__WEBPACK_IMPORTED_MODULE_4__[\"default\"]({\n        message: 'Какое-то сообщение'\n    });\n\n    button.append(document.body);\n    input.append(document.body);\n    textarea.append(document.body);\n    list.append(document.body);\n    message.append(document.body);\n});\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/button/button */ \"./blocks/button/button.js\");\n/* harmony import */ var _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/input/input */ \"./blocks/input/input.js\");\n/* harmony import */ var _blocks_list_list__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/list/list */ \"./blocks/list/list.js\");\n/* harmony import */ var _blocks_textarea_textarea__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/textarea/textarea */ \"./blocks/textarea/textarea.js\");\n/* harmony import */ var _blocks_messages_messages__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./blocks/messages/messages */ \"./blocks/messages/messages.js\");\n/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./blocks/reset.scss */ \"./blocks/reset.scss\");\n/* harmony import */ var _blocks_reset_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_blocks_reset_scss__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n\n    let button = new _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n        text: 'Тестовая кнопка'\n    });\n\n    let input = new _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n        placeholder: 'Тестовый инпут'\n    });\n\n    let list = new _blocks_list_list__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n        list: ['первый', 'второй', 'третий']\n    });\n\n    let textarea = new _blocks_textarea_textarea__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({\n        placeholder: 'Введите текст'\n    });\n\n    let message = new _blocks_messages_messages__WEBPACK_IMPORTED_MODULE_4__[\"default\"]({\n        message: 'Какое-то сообщение'\n    });\n\n    button.append(document.body);\n    input.append(document.body);\n    textarea.append(document.body);\n    list.append(document.body);\n    message.append(document.body);\n});\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -188,7 +243,62 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blo
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".button {\\n  background: #000; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./blocks/button/button.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".button {\\n  white-space: nowrap;\\n  vertical-align: middle;\\n  text-align: center;\\n  cursor: pointer;\\n  font-size: 100%;\\n  padding: 8px 16px;\\n  color: #fff;\\n  border: none;\\n  background-color: #0078e7;\\n  text-decoration: none;\\n  border-radius: 2px;\\n  font-size: 14px;\\n  transition: background-color .35s ease-in-out;\\n  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }\\n  .button:hover {\\n    background-color: #3D9DF3; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./blocks/button/button.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/input/input.scss":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./blocks/input/input.scss ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".input {\\n  padding: 8px 10px;\\n  border: 1px solid #ccc;\\n  box-shadow: inset 0 1px 3px #ddd;\\n  border-radius: 4px;\\n  vertical-align: middle;\\n  box-sizing: border-box;\\n  transition: border-color .35s ease-in-out;\\n  font-size: 14px; }\\n  .input:focus {\\n    border-color: #129FEA; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./blocks/input/input.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/list/list.scss":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./blocks/list/list.scss ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".list {\\n  padding-left: 30px;\\n  list-style-type: disc; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./blocks/list/list.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/messages/message.scss":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./blocks/messages/message.scss ***!
+  \*********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".message {\\n  border: 1px solid #eee;\\n  padding: 16px;\\n  background-color: #fafafa; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./blocks/messages/message.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/reset.scss":
+/*!**********************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./blocks/reset.scss ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"html, body, div, span, applet, object, iframe,\\nh1, h2, h3, h4, h5, h6, p, blockquote, pre,\\na, abbr, acronym, address, big, cite, code,\\ndel, dfn, em, font, img, ins, kbd, q, s, samp,\\nsmall, strike, strong, sub, sup, tt, var,\\nb, u, i, center,\\ndl, dt, dd, ol, ul, li,\\nfieldset, form, label, legend,\\ntable, caption, tbody, tfoot, thead, tr, th, td {\\n  margin: 0;\\n  padding: 0;\\n  border: 0;\\n  outline: 0;\\n  font-size: 100%;\\n  vertical-align: baseline;\\n  background: transparent; }\\n\\nh1, h2, h3, h4, h5, h6 {\\n  font-weight: normal;\\n  font-style: normal;\\n  font-stretch: normal; }\\n\\narticle,\\naside,\\naudio,\\ncanvas,\\ndatalist,\\ndetails,\\nembed,\\nfigcaption,\\nfigure,\\nfooter,\\nheader,\\nkeygen,\\nmenu,\\nnav,\\noutput,\\nprogress,\\nsection,\\nsource,\\nvideo {\\n  display: block;\\n  margin: 0; }\\n\\nbody {\\n  line-height: 1;\\n  font: 14px/1.2 'Roboto', sans-serif; }\\n\\nol, ul {\\n  list-style: none; }\\n\\nblockquote, q {\\n  quotes: none; }\\n\\nblockquote:before, blockquote:after,\\nq:before, q:after {\\n  content: '';\\n  content: none; }\\n\\n/* remember to define focus styles! */\\n:focus {\\n  outline: 0; }\\n\\n/* remember to highlight inserts somehow! */\\nins {\\n  text-decoration: none; }\\n\\ndel {\\n  text-decoration: line-through; }\\n\\n/* tables still need 'cellspacing=\\\"0\\\"' in the markup */\\ntable {\\n  border-collapse: collapse;\\n  border-spacing: 0; }\\n\\ntd {\\n  vertical-align: top; }\\n\\nbutton::-moz-focus-inner,\\ninput[type=\\\"reset\\\"]::-moz-focus-inner,\\ninput[type=\\\"button\\\"]::-moz-focus-inner,\\ninput[type=\\\"submit\\\"]::-moz-focus-inner,\\ninput[type=\\\"submit\\\"]::-moz-focus-inner,\\ninput[type=\\\"file\\\"] > input[type=\\\"button\\\"]::-moz-focus-inner {\\n  /*ff fix*/\\n  border: none;\\n  padding: 0;\\n  margin: 0; }\\n\\ninput, textarea {\\n  font-family: Arial, \\\"Helvetica CY\\\", Helvetica, sans-serif; }\\n  input:-moz-placeholder, textarea:-moz-placeholder {\\n    color: #4d4d4d;\\n    font-weight: normal; }\\n  input::-moz-placeholder, textarea::-moz-placeholder {\\n    color: #4d4d4d;\\n    font-weight: normal; }\\n  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {\\n    color: #767676;\\n    display: inline-block;\\n    padding-top: 2px;\\n    font-weight: normal; }\\n\\n::-ms-clear {\\n  display: none; }\\n\\ninput:-webkit-autofill {\\n  color: #000 !important; }\\n\\ninput[type=number]::-webkit-inner-spin-button,\\ninput[type=number]::-webkit-outer-spin-button {\\n  -webkit-appearance: none;\\n  margin: 0; }\\n\\ninput[type='number'] {\\n  -moz-appearance: textfield; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./blocks/reset.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./blocks/textarea/textarea.scss":
+/*!**********************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js!./blocks/textarea/textarea.scss ***!
+  \**********************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".textarea {\\n  padding: 8px 10px;\\n  border: 1px solid #ccc;\\n  box-shadow: inset 0 1px 3px #ddd;\\n  border-radius: 4px;\\n  vertical-align: middle;\\n  box-sizing: border-box;\\n  transition: border-color .35s ease-in-out;\\n  font-size: 14px; }\\n  .textarea:focus {\\n    border-color: #129FEA; }\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./blocks/textarea/textarea.scss?./node_modules/css-loader!./node_modules/sass-loader/lib/loader.js");
 
 /***/ }),
 

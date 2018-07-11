@@ -1,4 +1,5 @@
 import Block from '../block';
+import './list.scss';
 
 export default class List extends Block {
 

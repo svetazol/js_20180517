@@ -1,4 +1,5 @@
 import Block from '../block';
+import './textarea.scss';
 
 export default class Textarea extends Block {
 

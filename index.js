@@ -3,6 +3,7 @@ import Input from './blocks/input/input';
 import List from './blocks/list/list';
 import Textarea from './blocks/textarea/textarea';
 import Message from './blocks/messages/messages';
+import './blocks/reset.scss';
 
 window.addEventListener('DOMContentLoaded', function () {
 
