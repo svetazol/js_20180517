@@ -1,4 +1,5 @@
 import Block from '../block';
+import './button.scss';
 
 export default class Button extends Block {
 
