@@ -1,4 +1,5 @@
 import Block from '../block';
+import template from './message.pug';
 
 export default class Message extends Block {
 
@@ -15,7 +16,9 @@ export default class Message extends Block {
         super();
 
         this.el.classList.toggle('message', true);
-        this.el.innerText = message;
+        this.el.innerHTML = template({
+            text: message
+        });
     }
 
 }
