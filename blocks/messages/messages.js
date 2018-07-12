@@ -1,5 +1,4 @@
 import Block from '../block';
-import './message.scss';
 
 export default class Message extends Block {
 
