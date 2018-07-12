@@ -4,7 +4,10 @@
   "description": "чатик номер 4",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development --watch",
+    "start": "static-server"
   },
   "repository": {
     "type": "git",
@@ -17,8 +20,14 @@
   },
   "homepage": "https://github.com/burlakilia/js_20180517#readme",
   "dependencies": {
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
     "static-server": "^2.2.1",
     "webpack": "^4.15.1",
     "webpack-cli": "^3.0.8"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.21.0"
   }
 }
