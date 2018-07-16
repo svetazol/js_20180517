@@ -48,6 +48,7 @@ window.addEventListener('DOMContentLoaded', function () {
         user: [{name:'Маша Петрова',id:1}, {name:'Петя Иванов',id:2}, {name:'Саша',id:3}, {name:'Таня',id:4}]
     });
 
+
     let messages  = new Messages({
         message:[
             {
@@ -112,6 +113,5 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
+
 });
-
-

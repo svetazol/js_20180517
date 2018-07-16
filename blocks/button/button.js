@@ -13,7 +13,9 @@ export default class Button extends Block {
      * @param {string} obj.text - текст кнопки
      * @param {string} [obj.type]
      */
+
     constructor({ text, style='button__classic', type='button' }) {
+
         super();
 
         this.el.classList.toggle('button');
@@ -22,6 +24,7 @@ export default class Button extends Block {
             type:type,
             style:style
         });
+
 
 
     }

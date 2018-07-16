@@ -1,4 +1,4 @@
-import Block from '../block';
+
 import template from './messages.pug';
 
 export default class Messages extends Block {
@@ -33,4 +33,5 @@ export default class Messages extends Block {
         this.el.classList.toggle('messages');
 
     }
+
 }

@@ -1,6 +1,7 @@
 import Block from '../block';
 import template from './textarea.pug';
 
+
 export default class Textarea extends Block {
 
     get name () {
@@ -10,6 +11,7 @@ export default class Textarea extends Block {
     /**
      * Input
      * @param {Object} obj
+
      * @param {string} obj.placeholder - текст кнопки,
      * @param {string} [obj.type] - тип инпута (по умолчанию text)
      */
@@ -24,3 +26,4 @@ export default class Textarea extends Block {
     }
 
 }
+

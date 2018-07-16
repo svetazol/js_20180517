@@ -26,4 +26,3 @@ export default class Input extends Block {
     }
 
 }
-

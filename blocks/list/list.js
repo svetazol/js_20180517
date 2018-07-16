@@ -1,5 +1,7 @@
 import Block from '../block';
+
 import template from './list.pug';
+
 
 export default class List extends Block {
 
@@ -28,3 +30,4 @@ export default class List extends Block {
     }
 
 }
+
