@@ -1,6 +1,6 @@
 import Block from '../block';
 import template from './textarea.pug';
-
+import style from './textarea.scss';
 
 export default class Textarea extends Block {
 

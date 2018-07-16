@@ -1,6 +1,7 @@
 import Block from '../block';
 
 import template from './list.pug';
+import style from './list.scss';
 
 
 export default class List extends Block {

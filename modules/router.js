@@ -7,20 +7,25 @@ export default class Router {
     /**
      * Добавить новый маршрут
      * @param {string} path - маршрут
-     * @param {Function} fn - функция коллбек
+     * @param {View} view - вьюха которая должна быть показана по маршруту
      */
-    route(path, fn) {
-        this.routes[path] = fn;
+    route(path, view) {
+        this.routes[path] = view;
         return this;
     }
 
     _onRoute(path) {
         path = path.replace('#', '');
 
-        let fn = this.routes[path];
+        let view = this.routes[path];
 
-        if (fn) {
-            fn();
+        if (this.current) {
+            this.current.hide();
+        }
+
+        if (view) {
+            view.show();
+            this.current = view;
         }
 
     }

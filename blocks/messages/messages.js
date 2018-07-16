@@ -1,5 +1,6 @@
 
-import template from './messages.pug';
+import template from './message.pug';
+import style from './message.scss';
 
 export default class Messages extends Block {
 
