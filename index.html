@@ -5,14 +5,52 @@
     <title>Hello world</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="dist/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="blocks/input/input.css">
+    <link rel="stylesheet" type="text/css" href="blocks/button/button.css">
+    <link rel="stylesheet" type="text/css" href="blocks/list/list.css">
+    <link rel="stylesheet" type="text/css" href="blocks/messages/messages.css">
+    <link rel="stylesheet" type="text/css" href="blocks/textarea/textarea.css">
+
+
+    <style>
+        .registrationWindow, .loginWindow, .chatWindow, .userWindow{
+            width: 20%;
+            height: 500px;
+            border: 1px solid grey;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .registrationWindow .input {
+            margin: 20px;
+        }
+        .registrationWindow .button {
+            margin: 20px;
+        }
+        .loginWindow .input {
+            margin: 20px;
+        }
+        .loginWindow .button {
+            margin: 20px;
+        }
+        .chatWindow .textarea {
+            margin: 20px;
+            height: 19%;
+        }
+        .chatWindow .messages {
+            height: 65%;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div hidden class="template template-message">
-        <div class="message">
-            <div class="message__text"></div>
-            <div class="message__author"></div>
-            <div class="message__spiner"></div>
-        </div>
-    </div>
+
+    <div class="registrationWindow"></div>
+    <div class="loginWindow"></div>
+    <div class="chatWindow"></div>
+    <div class="userWindow"></div>
+
+
+
 </body>
 </html>

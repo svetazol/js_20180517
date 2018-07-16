@@ -1,21 +1,29 @@
 import Block from '../block';
+import template from './textarea.pug';
+
 
 export default class Textarea extends Block {
 
     get name () {
-        return 'textarea';
+        return 'div';
     }
 
     /**
      * Input
      * @param {Object} obj
-     * @param {string} bj.placeholder - текст поля
+
+     * @param {string} obj.placeholder - текст кнопки,
+     * @param {string} [obj.type] - тип инпута (по умолчанию text)
      */
-    constructor({ placeholder }) {
+    constructor({ placeholder, value='' }) {
         super();
 
         this.el.classList.toggle('textarea', true);
-        this.el.placeholder = placeholder;
+        this.el.innerHTML=template({
+            placeholder:placeholder,
+            value:value
+        });
     }
 
 }
+

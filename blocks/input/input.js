@@ -1,9 +1,10 @@
 import Block from '../block';
+import template from './input.pug';
 
 export default class Input extends Block {
 
     get name () {
-        return 'input';
+        return 'div';
     }
 
     /**
@@ -16,9 +17,12 @@ export default class Input extends Block {
         super();
 
         this.el.classList.toggle('input', true);
-        this.el.type  = type;
-        this.el.placeholder = placeholder;
-        this.el.value = value;
+        this.el.innerHTML=template({
+            placeholder:placeholder,
+            value:value,
+            type:type
+        });
+
     }
 
 }
