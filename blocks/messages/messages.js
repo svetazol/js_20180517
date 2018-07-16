@@ -1,24 +1,37 @@
-import Block from '../block';
-import template from './message.pug';
 
-export default class Message extends Block {
+import template from './messages.pug';
 
-    get name () {
-        return 'p';
+export default class Messages extends Block {
+
+    get name() {
+        return 'div';
     }
 
     /**
-     * Input
+     * Кнопка
      * @param {Object} obj
-     * @param {string} obj.message - текст сообщения
+     * @param {string} obj.text - текст сообщения
+     * @param {string} obj.style - стиль сообщения received, sent
+     * @param {string} obj.user - имя отправителя сообщения
+     * @param {string} obj.time - время отправки сообщения
      */
     constructor({ message }) {
         super();
+        let list='';
+        let scrollDiv=document.createElement('div');
+        scrollDiv.classList.toggle('item__scroll');
+        for (let m of message) {
+            list+= template({
+                user: m.user,
+                text: m.text,
+                time: m.time,
+                style: m.style
+            });
+        }
+        scrollDiv.innerHTML=list;
+        this.el.appendChild(scrollDiv);
+        this.el.classList.toggle('messages');
 
-        this.el.classList.toggle('message', true);
-        this.el.innerHTML = template({
-            text: message
-        });
     }
 
 }
