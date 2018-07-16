@@ -5,43 +5,50 @@
     <title>Hello world</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <script src="dist/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="blocks/input/input.css">
+    <link rel="stylesheet" type="text/css" href="blocks/button/button.css">
+    <link rel="stylesheet" type="text/css" href="blocks/list/list.css">
+    <link rel="stylesheet" type="text/css" href="blocks/messages/messages.css">
+    <link rel="stylesheet" type="text/css" href="blocks/textarea/textarea.css">
+
+
     <style>
-        .button{
-            padding: 5px 15px;
+        .registrationWindow, .loginWindow, .chatWindow, .userWindow{
+            width: 20%;
+            height: 500px;
+            border: 1px solid grey;
+            margin: 10px;
+            display: inline-block;
+            vertical-align: top;
         }
-        .input {пшн
-            padding: 5px 15px;
+        .registrationWindow .input {
+            margin: 20px;
         }
-        .messages {
-            border: 1px solid #0000001c;
-            padding: 10px 20px;
-            border-radius: 9px;
+        .registrationWindow .button {
+            margin: 20px;
         }
-        .messages.sent {
-            background-color: #e5fec9;
-            margin-left: 10%;
+        .loginWindow .input {
+            margin: 20px;
         }
-        .messages.received {
-            margin-right: 10%;
+        .loginWindow .button {
+            margin: 20px;
         }
-        .textarea {
-            border: 1px solid #dbdbdb;
-            text-align: start;
-            resize: none;
-            padding: 7px 12px;
-            border-radius: 3px;
+        .chatWindow .textarea {
+            margin: 20px;
+            height: 19%;
         }
-        .list {
-            list-style-type: none;
-            padding: 0 20px;
-        }
-        .list li {
-            padding: 5px 0;
-            cursor: pointer;
+        .chatWindow .messages {
+            height: 65%;
+            margin: 20px;
         }
     </style>
 </head>
 <body>
+    <div class="registrationWindow"></div>
+    <div class="loginWindow"></div>
+    <div class="chatWindow"></div>
+    <div class="userWindow"></div>
+
 
 </body>
 </html>

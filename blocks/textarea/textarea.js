@@ -1,9 +1,10 @@
 import Block from '../block';
+import template from './textarea.pug';
 
 export default class Textarea extends Block {
 
     get name () {
-        return 'textarea';
+        return 'div';
     }
 
     /**
@@ -16,8 +17,10 @@ export default class Textarea extends Block {
         super();
 
         this.el.classList.toggle('textarea', true);
-        this.el.placeholder = placeholder;
-        this.el.value = value;
+        this.el.innerHTML=template({
+            placeholder:placeholder,
+            value:value
+        });
     }
 
 }
