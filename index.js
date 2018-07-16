@@ -1,34 +1,12 @@
-import Button from './blocks/button/button';
-import Input from './blocks/input/input';
-import List from './blocks/list/list';
-import Textarea from './blocks/textarea/textarea';
-import Message from './blocks/messages/messages';
+import Router from './modules/router';
 
 window.addEventListener('DOMContentLoaded', function () {
+    let router = new Router();
 
-    let button = new Button({
-        text: 'Тестовая кнопка'
-    });
+    router
+        .route('login', () => { console.log('show login'); })
+        .route('chat', () => { console.log('show chat');  })
+        .route('users', () => { console.log('show users'); });
 
-    let input = new Input({
-        placeholder: 'Тестовый инпут'
-    });
-
-    let list = new List({
-        list: ['первый', 'второй', 'третий']
-    });
-
-    let textarea = new Textarea({
-        placeholder: 'Введите текст'
-    });
-
-    let message = new Message({
-        message: 'Какое-то сообщение'
-    });
-
-    button.append(document.body);
-    input.append(document.body);
-    textarea.append(document.body);
-    list.append(document.body);
-    message.append(document.body);
+    router.start();
 });
