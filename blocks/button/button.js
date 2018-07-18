@@ -1,5 +1,5 @@
 import Block from '../block';
-import style from './button.scss';
+import style from './button.css';
 import template from './button.pug';
 
 export default class Button extends Block {

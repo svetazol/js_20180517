@@ -1,4 +1,4 @@
-.signup-view {
+.users-view {
   width: 20%;
   height: 500px;
   border: 1px solid grey;
@@ -7,10 +7,12 @@
   vertical-align: top;
 }
 
-.input {
+.users-view .textarea {
   margin: 20px;
+  height: 19%;
 }
 
-.button {
+.users-view .messages {
+  height: 65%;
   margin: 20px;
 }

@@ -1,10 +1,10 @@
 import Block from '../block';
 import template from './input.pug';
-import style from './input.scss';
+import style from './input.css';
 
 export default class Input extends Block {
 
-    get name () {
+    get name() {
         return 'div';
     }
 
@@ -14,7 +14,7 @@ export default class Input extends Block {
      * @param {string} obj.placeholder - текст кнопки,
      * @param {string} [obj.type] - тип инпута (по умолчанию text)
      */
-    constructor({ placeholder, type = 'text', value='' }) {
+    constructor({placeholder, type = 'text', value = ''}) {
         super();
 
         this.el.classList.toggle('input', true);
@@ -30,6 +30,17 @@ export default class Input extends Block {
         this.input.addEventListener('input', event => this.onInput(event));
     }
 
+    get enteredValue(){
+        return this.input.value;
+    }
+
+    showValid() {
+        this.input.style.borderColor = 'green';
+    }
+
+    showInvalid() {
+        this.input.style.borderColor = 'red';
+    }
     /**
      * @override
      */

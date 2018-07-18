@@ -1,7 +1,7 @@
 import Block from '../block';
 
 import template from './list.pug';
-import style from './list.scss';
+import style from './list.css';
 
 
 export default class List extends Block {
@@ -12,14 +12,13 @@ export default class List extends Block {
 
     /**
      * Input
-     * @param {Object} obj
-     * @param {array} obj.user - массив объектов пользователей
+     * @param {array} obj.users - массив объектов пользователей
      *
      */
-    constructor({ user }) {
+    constructor(users) {
         super();
         let list='';
-        for (let u of user){
+        for (let u of users){
             list+=template({
                 name: u.name,
                 id: u.id
