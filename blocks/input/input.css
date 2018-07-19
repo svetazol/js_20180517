@@ -1,7 +1,7 @@
-.input .item__wrap {
+.input__wrapper {
     margin: 0 32px 0 0;
 }
-.input .item__input {
+.input__item {
     padding: 9px 15px;
     outline: none;
     border: 1px solid #434343;
@@ -10,4 +10,8 @@
 }
 input:focus{
     border: 1px solid #0976c4;
+}
+
+.input_invalid {
+    background-color: red;
 }

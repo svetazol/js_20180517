@@ -16,7 +16,7 @@ export default class Messages extends Block {
     constructor(messages) {
         super();
         this.scrollDiv = document.createElement('div');
-        this.scrollDiv.classList.toggle('item__scroll');
+        this.scrollDiv.classList.toggle('messages__scroll');
         messages.map(item=>this.append(item));
         this.el.appendChild(this.scrollDiv);
         this.el.classList.toggle('messages');

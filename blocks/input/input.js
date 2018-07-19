@@ -8,6 +8,14 @@ export default class Input extends Block {
         return 'div';
     }
 
+    get baseName() {
+        return 'input';
+    }
+
+    get invalidFieldClass(){
+        return `${this.baseName}_invalid`
+    }
+
     /**
      * Input
      * @param {Object} obj
@@ -17,7 +25,7 @@ export default class Input extends Block {
     constructor({placeholder, type = 'text', value = ''}) {
         super();
 
-        this.el.classList.toggle('input', true);
+        this.el.classList.toggle(this.baseName, true);
 
         this.el.innerHTML = template({
             placeholder: placeholder,
@@ -26,7 +34,7 @@ export default class Input extends Block {
         });
 
         // TODO поправить по БЭМ
-        this.input = this.el.querySelector('input');
+        this.input = this.el.querySelector(this.baseName);
         this.input.addEventListener('input', event => this.onInput(event));
     }
 
@@ -35,11 +43,11 @@ export default class Input extends Block {
     }
 
     showValid() {
-        this.input.style.borderColor = 'green';
+        this.input.classList.toggle(this.invalidFieldClass, false)
     }
 
     showInvalid() {
-        this.input.style.borderColor = 'red';
+        this.input.classList.toggle(this.invalidFieldClass, true)
     }
     /**
      * @override

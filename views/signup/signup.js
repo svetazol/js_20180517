@@ -39,6 +39,25 @@ export default class SignupView extends View {
             .addBlock('pwd', this.pwd)
             .addBlock('pwd-repeat', this.pwdRepeat)
             .addBlock('submit', this.button);
+
+    }
+
+    isValid() {
+        if (!this.isNotEmpty(['name', 'pwd', 'pwdRepeat'])) {
+            return false;
+        }
+        if (this.pwd.enteredValue !== this.pwdRepeat.enteredValue) {
+            this.pwd.showInvalid();
+            this.pwdRepeat.showInvalid();
+            return false;
+        }
+        this.pwd.showValid();
+        this.pwdRepeat.showValid();
+        return true;
+    }
+
+    successSubmit() {
+        console.log('signup:', this.name.enteredValue, this.pwd.enteredValue, this.pwdRepeat.enteredValue);
     }
 
 }

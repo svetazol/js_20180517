@@ -35,10 +35,16 @@ export default class Textarea extends Block {
         return this.textarea.value = null;
     }
 
+    onKeyDown(event) {
+        if (event.keyCode === 13 && event.shiftKey){
+            this.onSend(event)
+        }
+    }
+
     /**
      * @override
      */
-    onKeyDown(event) {
+    onSend(event) {
 
     }
 

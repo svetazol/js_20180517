@@ -3,43 +3,43 @@
     position: relative;
     overflow: hidden;
 }
-.messages .item__scroll {
+.messages__scroll {
     overflow: auto;
     height: 100%;
     /*position: absolute;*/
     right: -18px;
     padding: 0 2px 0 0;
 }
-.messages .item__wrap {
+.message {
     margin-bottom: 10px;
 }
-.messages .sent {
+.message_sent {
     margin-left: 10%;
     text-align: right;
 }
-.messages .received {
+.message_received {
     margin-right: 10%;
     text-align: left;
 }
-.messages .item__content {
+.message__content {
     display: inline-block;
     padding: 15px 25px;
     border-radius: 5px;
     text-align: left;
 }
-.messages .item__user {
+.message__content_user {
     margin: 0 0 9px 0;
     font-weight: 600;
     color: #505ca0;
 }
-.messages .item__time {
+.message__content_time {
     padding: 3px 0 0 14px;
     font-size: 13px;
     float: right;
 }
-.received .item__content{
+.message__content_received{
     background-color: #ddf1ff;
 }
-.sent .item__content{
+.message__content_sent{
     background-color: #b2d5ee;
 }

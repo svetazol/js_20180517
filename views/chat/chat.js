@@ -17,24 +17,22 @@ export default class ChatView extends View {
         this.messages = new Messages([]);
 
         this.textarea = new TextArea({
-            placeholder: 'Введите сообщение и нажмите enter'
+            placeholder: 'Введите сообщение и нажмите shift+enter'
         });
 
         this
             .addBlock('messages', this.messages)
             .addBlock('textarea', this.textarea);
 
-        this.textarea.onKeyDown = (e) => {
-            if ((e.keyCode ? e.keyCode : e.which) === 13) {
-                this.messages.append({
-                    text: this.textarea.value,
-                    time: new Date().toString().split(" ")[4],
-                    style: 'sent',
-                    user: 'you'
-                });
-                e.preventDefault();
-                this.textarea.clearValue();
-            }
+        this.textarea.onSend = (e) => {
+            this.messages.append({
+                text: this.textarea.value,
+                time: new Date().toString().split(" ")[4],
+                style: 'sent',
+                user: 'you'
+            });
+            e.preventDefault();
+            this.textarea.clearValue();
         };
     }
 

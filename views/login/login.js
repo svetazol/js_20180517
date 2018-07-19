@@ -36,38 +36,15 @@ export default class LoginView extends View {
             .addBlock('name', this.name)
             .addBlock('pwd', this.pwd)
             .addBlock('submit', this.button);
-
-        this.el.addEventListener('submit', event => this.onSubmit(event));
     }
-
-    onSubmit(event) {
-        if (this.isValid()) {
-            this.loginSuccess();
-        }
-        else {
-            this.loginFail(event);
-        }
-    };
 
     isValid() {
-        let fields = ['name', 'pwd'];
-        for (let field of fields) {
-            if (!this[field].enteredValue) {
-                this[field].showInvalid();
-                return false;
-            }
-            this[field].showValid();
-        }
-        return true;
+        return this.isNotEmpty(['name', 'pwd']);
+
     }
 
-    loginSuccess() {
+    successSubmit() {
         console.log('logged in:', this.name.enteredValue, this.pwd.enteredValue);
-    }
-
-
-    loginFail(event) {
-        event.preventDefault();
     }
 
 }
