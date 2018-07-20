@@ -3,6 +3,7 @@ import Button from '../../blocks/button/button';
 import View from '../view';
 import style from './signup.scss';
 import template from './signup.pug';
+import User from '../../models/user';
 
 export default class SignupView extends View {
 
@@ -33,6 +34,7 @@ export default class SignupView extends View {
             type: 'submit'
         });
 
+        this.user = new User();
 
         this
             .addBlock('name', this.name)
@@ -57,7 +59,18 @@ export default class SignupView extends View {
     }
 
     successSubmit() {
-        console.log('signup:', this.name.enteredValue, this.pwd.enteredValue, this.pwdRepeat.enteredValue);
+        this.user.signup(
+            this.name.getValue(),
+            this.pwd.getValue(),
+            this.pwdRepeat.getValue()
+        ).then(user => {
+            console.log(user);
+            location.hash = '#chat'
+        }, error => {
+            alert('ERROR');
+        });
+
+    });
     }
 
 }
