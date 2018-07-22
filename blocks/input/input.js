@@ -38,7 +38,7 @@ export default class Input extends Block {
         this.input.addEventListener('input', event => this.onInput(event));
     }
 
-    get enteredValue(){
+    get value(){
         return this.input.value;
     }
 

@@ -48,7 +48,7 @@ export default class SignupView extends View {
         if (!this.isNotEmpty(['name', 'pwd', 'pwdRepeat'])) {
             return false;
         }
-        if (this.pwd.enteredValue !== this.pwdRepeat.enteredValue) {
+        if (this.pwd.value !== this.pwdRepeat.value) {
             this.pwd.showInvalid();
             this.pwdRepeat.showInvalid();
             return false;
@@ -58,19 +58,18 @@ export default class SignupView extends View {
         return true;
     }
 
-    successSubmit() {
+    processSubmit() {
         this.user.signup(
-            this.name.getValue(),
-            this.pwd.getValue(),
-            this.pwdRepeat.getValue()
+            this.name.value,
+            this.pwd.value,
+            this.pwdRepeat.value
         ).then(user => {
             console.log(user);
             location.hash = '#chat'
         }, error => {
-            alert('ERROR');
+            alert(`Signup failed: ${error.statusText}, ${error.responseText}`);
         });
 
-    });
     }
 
 }

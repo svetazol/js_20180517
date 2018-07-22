@@ -3,6 +3,7 @@ import Button from '../../blocks/button/button';
 import View from '../view';
 import style from './login.scss';
 import template from './login.pug';
+import User from "../../models/user";
 
 export default class LoginView extends View {
 
@@ -28,9 +29,7 @@ export default class LoginView extends View {
             type: 'submit'
         });
 
-        this.pwd.onInput = function (event) {
-            console.log(event);
-        };
+        this.user = new User();
 
         this
             .addBlock('name', this.name)
@@ -43,8 +42,16 @@ export default class LoginView extends View {
 
     }
 
-    successSubmit() {
-        console.log('logged in:', this.name.enteredValue, this.pwd.enteredValue);
+    processSubmit() {
+        this.user.login(
+            this.name.value,
+            this.pwd.value
+        ).then(user => {
+            location.hash = '#chat'
+        }, error => {
+            alert(`Login failed: ${error.statusText}, ${error.responseText}`);
+        });
+
     }
 
 }

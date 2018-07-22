@@ -1,6 +1,7 @@
 import TextArea from '../../blocks/textarea/textarea';
 import Messages from '../../blocks/messages/messages';
 import View from '../view';
+import User from "../../models/user";
 import style from './chat.scss';
 import template from './chat.pug';
 
@@ -20,6 +21,8 @@ export default class ChatView extends View {
             placeholder: 'Введите сообщение и нажмите shift+enter'
         });
 
+        this.currentUser = new User();
+
         this
             .addBlock('messages', this.messages)
             .addBlock('textarea', this.textarea);
@@ -29,7 +32,7 @@ export default class ChatView extends View {
                 text: this.textarea.value,
                 time: new Date().toString().split(" ")[4],
                 style: 'sent',
-                user: 'you'
+                user: this.currentUser.name
             });
             e.preventDefault();
             this.textarea.clearValue();

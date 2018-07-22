@@ -27,8 +27,8 @@ window.addEventListener('DOMContentLoaded', function () {
     router
         .route('login', loginView)
         .route('signup', signupView)
-        .route('chat', chatView)
-        .route('users', usersView);
+        .route('chat', chatView, true)
+        .route('users', usersView, true);
 
     router.start();
 });

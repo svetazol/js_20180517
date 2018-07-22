@@ -1,6 +1,6 @@
 export default class View {
 
-    constructor({ el }) {
+    constructor({el}) {
         this.el = el;
         this.hide();
 
@@ -25,21 +25,20 @@ export default class View {
     }
 
     onSubmit(event) {
+        event.preventDefault();
         if (this.isValid()) {
-            this.successSubmit();
-        }
-        else {
-            this.failSubmit(event);
+            this.processSubmit();
         }
     }
-    isValid(){
+
+    isValid() {
         throw new Error('Not implemented isValid');
     }
 
     isNotEmpty(fields) {
         let isNotEmpty = true;
         for (let field of fields) {
-            if (!this[field].enteredValue) {
+            if (!this[field].value) {
                 this[field].showInvalid();
                 isNotEmpty = false;
             }
@@ -50,15 +49,9 @@ export default class View {
         return isNotEmpty;
     }
 
-    successSubmit() {
-        throw new Error('Not implemented successSubmit');
+    processSubmit() {
+        throw new Error('Not implemented processSubmit');
     }
-
-
-    failSubmit(event) {
-        event.preventDefault();
-    }
-
 
 
 }
